@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/suiramdev/discordBumper#readme",
   "dependencies": {
-    "discord.js": "^11.6.4"
+    "discord.js": "^11.6.4",
+    "nodemon": "^2.0.7"
   }
 }
