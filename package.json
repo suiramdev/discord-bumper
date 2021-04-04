@@ -1,0 +1,22 @@
+{
+  "name": "discordbumper",
+  "version": "1.0.0",
+  "description": "A self-bot that automaticaly bump your server on disboard.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suiramdev/discordBumper.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/suiramdev/discordBumper/issues"
+  },
+  "homepage": "https://github.com/suiramdev/discordBumper#readme",
+  "dependencies": {
+    "discord.js": "^11.6.4"
+  }
+}
