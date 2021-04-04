@@ -1,5 +1,5 @@
 # discordBumper
-A self-bot that automaticaly bump your server on disboard.
+A self-bot that automatically bump your server on disboard.
 
 **WARNING:** This is against Discord's ToS.
 
