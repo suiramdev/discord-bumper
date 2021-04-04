@@ -1,0 +1,10 @@
+{
+  "bumpServers": {
+    "SERVER ID": {
+      "channel": "BUMP CHANNEL ID",
+      "bot": "BOT BUMPER ID",
+      "command": "!d bump"
+    }
+  },
+  "token": "DISCORD USER TOKEN"
+}
