@@ -4,8 +4,8 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 client.on('ready', function() {
+    console.log("👀 Looking for potential bumps...");
     setInterval(() => {
-        console.log("👀 Looking for potential bumps...")
         for (let server in config.bumpServers) {
             const serverConfig = config.bumpServers[server];
             const channel = client.guilds.get(server).channels.get(serverConfig.channel);
