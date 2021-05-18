@@ -11,14 +11,12 @@ client.on('ready', function() {
             const channel = client.guilds.get(server).channels.get(serverConfig.channel);
             channel.fetchMessages()
                 .then(messages => {
-                    const botMessages = messages.filter(message => message.author.id == serverConfig.bot);
-                    if (new Date(botMessages.last().createdTimestamp).getHours() + 2 >= new Date().getHours()) {
-                        console.log("🎉 Bumped");
+                    const botMessages = messages.filter(message => message.author.id == serverConfig.bot && message.embeds[0].color == 2406327);
+                    if (new Date(botMessages.last().createdTimestamp).getMilliseconds() - new Date().getMilliseconds() >= serverConfig.delay)
                         channel.send(serverConfig.command);
-                    }
                 });
         }
-    }, 10000);
+    }, 2000);
 });
 
 client.login(config.token);
