@@ -1,5 +1,5 @@
-const config = require('./config.json');
 const Discord = require('discord.js');
+const config = require('./config.json');
 
 const client = new Discord.Client();
 
@@ -12,7 +12,7 @@ client.on('ready', function() {
             channel.fetchMessages()
                 .then(messages => {
                     const botMessages = messages.filter(message => message.author.id == serverConfig.bot && message.embeds[0].color == 2406327);
-                    if (new Date(botMessages.last().createdTimestamp).getMilliseconds() - new Date().getMilliseconds() >= serverConfig.delay)
+                    if (new Date().getTime() - new Date(botMessages.first().createdTimestamp).getTime() >= serverConfig.delay)
                         channel.send(serverConfig.command);
                 });
         }
