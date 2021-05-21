@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const moment = require("moment");
 const config = require('./config.json');
 
 const client = new Discord.Client();
@@ -12,8 +13,12 @@ client.on('ready', function() {
             channel.fetchMessages()
                 .then(messages => {
                     const botMessages = messages.filter(message => message.author.id == serverConfig.bot && message.embeds[0].color == 2406327);
-                    if (new Date().getTime() - new Date(botMessages.first().createdTimestamp).getTime() >= serverConfig.delay)
+                    const todayDate = moment(new Date());
+                    const messageDate = moment(new Date(botMessages.first().createdTimestamp));
+                    if (todayDate.diff(messageDate) >= serverConfig.delay) {
+                        console.log(todayDate.diff(messageDate));
                         channel.send(serverConfig.command);
+                    }
                 });
         }
     }, 2000);
