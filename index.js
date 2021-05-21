@@ -12,7 +12,7 @@ client.on('ready', function() {
             const channel = client.guilds.get(server).channels.get(serverConfig.channel);
             channel.fetchMessages()
                 .then(messages => {
-                    const botMessages = messages.filter(message => message.author.id == serverConfig.bot && message.embeds[0].color == 2406327);
+                    const botMessages = messages.filter(message => message.author.id == serverConfig.bot && message.embeds[0].color == serverConfig.color);
                     const todayDate = moment(new Date());
                     const messageDate = moment(new Date(botMessages.first().createdTimestamp));
                     if (todayDate.diff(messageDate) >= serverConfig.delay) {

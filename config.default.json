@@ -3,7 +3,9 @@
     "SERVER ID": {
       "channel": "CHANNEL ID",
       "bot": "BOT BUMPER ID",
-      "command": "!d bump"
+      "command": "!d bump",
+      "color": 2406327,
+      "delay": 7200000
     }
   },
   "token": "DISCORD TOKEN"
